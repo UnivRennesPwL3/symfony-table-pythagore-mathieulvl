@@ -5,29 +5,29 @@ class PythagoreUtility
 {
     public function display(): string
     {
-        $table = "<table border=\"1\" border-collapse=\"collapse\">\n";
-        $table .= "<tr><th>&nbsp;</th>";
+        $t = "<table border=\"1\" border-collapse=\"collapse\">\n";
+        $t .= "<tr><th>&nbsp;</th>";
 
        
         for ($i = 0; $i <= 10; $i++) {
-            $table .= "<th>$i</th>";
+            $t .= "<th>$i</th>";
         }
-        $table .= "</tr>\n";   
+        $t .= "</tr>\n";   
         for ($i = 0; $i <= 10; $i++) {
-            $table .= "<tr>";
-            $table .= "<th>$i</th>";  
+            $t .= "<tr>";
+            $t .= "<th>$i</th>";  
 
             for ($j = 0; $j <= 10; $j++) {
                 if ($i === $j) {
-                    $table .= "<td>X</td>"; 
+                    $t .= "<td>X</td>"; 
                 } else {
-                    $table .= "<td>" . ($i * $j) . "</td>";  
+                    $t .= "<td>" . ($i * $j) . "</td>";  
                 }
             }
-            $table .= "</tr>\n";
+            $t .= "</tr>\n";
         }
 
-        $table .= "</table>\n";
-        return $table;
+        $t .= "</table>\n";
+        return $t;
     }
 }
